@@ -1,8 +1,20 @@
+import Image from "next/image";
+import solaPhoto from "@/assets/sola-profile.jpeg";
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-sola-skyLight via-sola-pinkLight to-sola-yellowLight px-4 pb-20 pt-16 text-center">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-6">
-        <span className="animate-bounceSlow text-7xl">🐶</span>
+        <div className="relative h-40 w-40 animate-bounceSlow overflow-hidden rounded-full border-8 border-white shadow-xl sm:h-48 sm:w-48">
+          <Image
+            src={solaPhoto}
+            alt="쏠랭이"
+            fill
+            sizes="(min-width: 640px) 192px, 160px"
+            className="object-cover"
+            priority
+          />
+        </div>
         <h1 className="text-4xl font-extrabold leading-tight text-sola-brown sm:text-6xl">
           쏠랭이의 비밀기지
         </h1>
